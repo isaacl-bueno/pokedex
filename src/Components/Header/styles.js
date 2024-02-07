@@ -7,6 +7,7 @@ export const Container = styled.header`
     display: flex;
     justify-content: center;
     align-items: end;
+    box-shadow: 0 4px 6px #8f8d8d;
 `;
 
 export const LowContainer = styled.header`
@@ -19,7 +20,7 @@ export const LowContainer = styled.header`
 
 export const CenterDiv = styled.div`
     width: 100%;
-    max-width: 1100px;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,4 +36,26 @@ export const CenterDiv = styled.div`
     height: 125px;
     }
 
+    .Pokedex{
+        width: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            height:60px; 
+            width:60px; 
+        }
+    }
+    .SynviaContainer{
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .TextPokedex{
+        font-size: 45px;
+        font-weight: bold;
+        color: #ffffff;
+    }
 `;
