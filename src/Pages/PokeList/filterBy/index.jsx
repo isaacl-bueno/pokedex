@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Buttons from './buttons';
 
 import * as S from "./styles";
 
-export default function FilterBy({ data, filterByNames }) {
+export default function FilterBy({ data }) {
 
   return (
     <S.Container>

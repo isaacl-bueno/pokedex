@@ -7,7 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import heartSVG from "../../assets/faheart.svg";
 import * as S from "./styles";
+import { Box } from '@mui/material';
 
 export default function RecipeReviewCard({
   national_number,
@@ -39,17 +41,17 @@ export default function RecipeReviewCard({
     setIsFavorite(favorites.includes(national_number));
   }, [national_number]);
 
-  const typeColors = {
-    "Grass": "#4CAF50",
-    "Poison": "#9C27B0",
-  };
 
   return (
-    <S.Container >
+    <S.Container>
       <Card sx={{ maxWidth: 168, mt: 10 }}>
         <CardActions className='CardActions'>
           <IconButton className='IconButton' aria-label="add to favorites" onClick={toggleFavorite}>
-            <FontAwesomeIcon icon={faHeart} style={{ color: isFavorite ? "#e60f00" : "#B8B8B8" }} />
+            {!isFavorite ? (
+              <img style={{ height: "25px", width: "25px", color: "#e60f00" }} src={heartSVG} alt="Synvia SVG" />
+            ) : (
+              <FontAwesomeIcon icon={faHeart} style={{ color: "#e60f00" }} />
+            )}
           </IconButton>
         </CardActions>
         <CardMedia
@@ -62,27 +64,27 @@ export default function RecipeReviewCard({
           alt="Paella dish"
         />
         <CardContent className='Content'>
-          <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
+          <Typography sx={{ width: "100%", color: "#333333" }} variant="body2" color="text.secondary">
             {"Nº " + (national_number || '')}
           </Typography>
-          <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
+          <Typography sx={{ width: "100%", color: "#333333" }} variant="body2" color="text.secondary">
             <b>{name || ''}</b>
-          </Typography >
-          <Typography sx={{ width: "100%", display: "flex", color: "#333333", }}>
+          </Typography>
+          <Typography sx={{ width: "100%", display: "flex", color: "#333333" }}>
             {type.map((typeItem, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: typeColors[typeItem] || 'gray',
-                  color: 'white',
-                  padding: '4px 8px',
-                  borderRadius: '4px',
-                  margin: '4px',
-                  display: 'inline-block',
-                }}
-              >
-                {typeItem}
-              </div>
+              <Box
+              key={index}
+              sx={{
+                backgroundColor: typeItem.toLowerCase() || 'gray',
+                color: 'white',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                margin: '4px',
+                display: 'inline-block',
+              }}
+            >
+              {typeItem}
+            </Box>
             ))}
           </Typography>
         </CardContent>

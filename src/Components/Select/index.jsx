@@ -31,7 +31,7 @@ function getStyles(name, personName, theme) {
   };
 }
 
-export default function SingleSelect(labelName) {
+export default function SingleSelect({ labelName, OrderBy }) {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState('');
 
@@ -40,6 +40,7 @@ export default function SingleSelect(labelName) {
       target: { value },
     } = event;
     setPersonName(value);
+    OrderBy({ type: value });
   };
 
   return (
