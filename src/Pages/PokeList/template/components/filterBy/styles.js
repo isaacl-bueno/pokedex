@@ -18,7 +18,7 @@ export const Container = styled.div`
     }
     .Switch{
         padding: 7px;
-        .css-1yjjitx-MuiSwitch-track {
+        .css-1yjjitx-MuiSwitch-track .css-1ju1kxc{
             border-radius: 50px;
         }
         .css-uru11c-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
