@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 1280px;
@@ -7,11 +7,12 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    scrollbar-width: thin; 
-    scrollbar-color: #888888; 
+    scrollbar-width: thin;
+    scrollbar-color: #888888;
 `;
 
 export const CardContainer = styled.div`
+    overflow: hidden;
     width: 1280px;
     justify-content: space-between;
     height: 100%;
@@ -25,6 +26,6 @@ export const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    scrollbar-width: thin; 
-    scrollbar-color: #888888; 
+    scrollbar-width: thin;
+    scrollbar-color: #888888;
 `;

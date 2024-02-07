@@ -45,7 +45,7 @@ export default function RecipeReviewCard({
   };
 
   return (
-    <S.Container>
+    <S.Container >
       <Card sx={{ maxWidth: 168, mt: 10 }}>
         <CardActions className='CardActions'>
           <IconButton className='IconButton' aria-label="add to favorites" onClick={toggleFavorite}>
@@ -57,17 +57,18 @@ export default function RecipeReviewCard({
           component="img"
           height="168"
           width="168"
+          sx={{ objectFit: "scale-down" }}
           image={sprites?.large || ''}
           alt="Paella dish"
         />
         <CardContent className='Content'>
-        <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
-          {"Nº " + (national_number || '')}
-        </Typography>
+          <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
+            {"Nº " + (national_number || '')}
+          </Typography>
           <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
             <b>{name || ''}</b>
           </Typography >
-          <Typography sx={{ width: "100%", display: "flex", color: "#333333",}}>
+          <Typography sx={{ width: "100%", display: "flex", color: "#333333", }}>
             {type.map((typeItem, index) => (
               <div
                 key={index}

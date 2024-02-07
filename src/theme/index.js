@@ -37,20 +37,20 @@ export const theme = createTheme({
                 textSizeLarge: {
                     padding: '12px 16px',
                 },
-                fontFamily: 'Segoe UI',
+                fontFamily: 'Titillium Web',
             },
         },
         MuiButtonBase: {
             defaultProps: {
                 disableRipple: true,
-                fontFamily: 'Segoe UI',
+                fontFamily: 'Titillium Web',
             },
         },
         MuiCardContent: {
             styleOverrides: {
                 root: {
                     padding: '32px 24px',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                     '&:last-child': {
                         paddingBottom: '32px',
                     },
@@ -61,17 +61,17 @@ export const theme = createTheme({
             defaultProps: {
                 titleTypographyProps: {
                     variant: 'h6',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
                 subheaderTypographyProps: {
                     variant: 'body2',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
             },
             styleOverrides: {
                 root: {
                     padding: '32px 24px',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
             },
         },
@@ -81,7 +81,7 @@ export const theme = createTheme({
                     boxSizing: 'border-box',
                     margin: 0,
                     padding: 0,
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
                 html: {
                     MozOsxFontSmoothing: 'grayscale',
@@ -90,7 +90,7 @@ export const theme = createTheme({
                     flexDirection: 'column',
                     minHeight: '100%',
                     width: '100%',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
                 body: {
                     display: 'flex',
@@ -98,7 +98,7 @@ export const theme = createTheme({
                     flexDirection: 'column',
                     minHeight: '100%',
                     width: '100%',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
                 '#__next': {
                     display: 'flex',
@@ -106,7 +106,7 @@ export const theme = createTheme({
                     flexDirection: 'column',
                     //height: "100%",
                     width: '100%',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
             },
         },
@@ -114,7 +114,7 @@ export const theme = createTheme({
             styleOverrides: {
                 notchedOutline: {
                     borderColor: '#E6E8F0',
-                    fontFamily: 'Segoe UI',
+                    fontFamily: 'Titillium Web',
                 },
             },
         },
@@ -124,7 +124,7 @@ export const theme = createTheme({
                     backgroundColor: '#42AF59',
                     '.MuiTableCell-root': {
                         color: '#ffffff',
-                        fontFamily: 'Segoe UI',
+                        fontFamily: 'Titillium Web',
                     },
                     borderBottom: 'none',
                     '& .MuiTableCell-root': {
@@ -134,12 +134,12 @@ export const theme = createTheme({
                         lineHeight: 1,
                         letterSpacing: 0.5,
                         textTransform: 'uppercase',
-                        fontFamily: 'Segoe UI',
+                        fontFamily: 'Titillium Web',
                     },
                     '& .MuiTableCell-paddingCheckbox': {
                         paddingTop: 4,
                         paddingBottom: 4,
-                        fontFamily: 'Segoe UI',
+                        fontFamily: 'Titillium Web',
                     },
                 },
             },
@@ -260,7 +260,7 @@ export const theme = createTheme({
     shape: {
         borderRadius: 8,
     },
-    fontFamily: 'Segoe UI',
+    fontFamily: 'Titillium Web',
     shadows: [
         'none',
         '0px 1px 1px rgba(100, 116, 139, 0.06), 0px 1px 2px rgba(100, 116, 139, 0.1)',
@@ -293,7 +293,7 @@ export const theme = createTheme({
             fontWeight: 600,
         },
         fontFamily:
-            '"Segoe UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+            '"Titillium Web", -apple-system, BlinkMacSystemFont, "Titillium Web", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Titillium Web Emoji"',
         body1: {
             fontSize: '1rem',
             fontWeight: 400,
@@ -301,25 +301,25 @@ export const theme = createTheme({
         },
         body2: {
             fontSize: '0.875rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontWeight: 400,
             lineHeight: 1.57,
         },
         subtitle1: {
             fontSize: '1rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontWeight: 500,
             lineHeight: 1.75,
         },
         subtitle2: {
             fontSize: '0.875rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontWeight: 500,
             lineHeight: 1.57,
         },
         overline: {
             fontSize: '0.75rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontWeight: 600,
             letterSpacing: '0.5px',
             lineHeight: 2.5,
@@ -327,43 +327,43 @@ export const theme = createTheme({
         },
         caption: {
             fontSize: '0.75rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontWeight: 400,
             lineHeight: 1.66,
         },
         h1: {
             fontWeight: 700,
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontSize: '3.5rem',
             lineHeight: 1.375,
         },
         h2: {
             fontWeight: 700,
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontSize: '3rem',
             lineHeight: 1.375,
         },
         h3: {
             fontWeight: 700,
             fontSize: '2.25rem',
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             lineHeight: 1.375,
         },
         h4: {
             fontWeight: 700,
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontSize: '2rem',
             lineHeight: 1.375,
         },
         h5: {
             fontWeight: 600,
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontSize: '1.5rem',
             lineHeight: 1.375,
         },
         h6: {
             fontWeight: 600,
-            fontFamily: 'Segoe UI',
+            fontFamily: 'Titillium Web',
             fontSize: '1.125rem',
             lineHeight: 1.375,
         },

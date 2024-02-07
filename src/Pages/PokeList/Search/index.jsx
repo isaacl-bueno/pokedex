@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import MultipleSelect from '../../../Components/Select';
-import TextFields from '../../../Components/Input';
 
 import * as S from "./styles";
+import CustomizedInputBase from './CustomizedInputBase';
 
-export default function Search() { 
+export default function Search({ filterByNames, data }) {
 
   return (
     <S.Container>
-      <TextFields/>
+      <CustomizedInputBase filterByNames={filterByNames} data={data} />
       <div className="OrderBy">
-          <div>Ordenar por:</div>
-          <MultipleSelect />
+        <div>Ordenar por:</div>
+        <MultipleSelect />
       </div>
     </S.Container>
   );

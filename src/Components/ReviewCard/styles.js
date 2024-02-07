@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import { Box } from '@mui/material';
+import styled from 'styled-components';
 
-export const Container = styled.div`
-    .IconButton{
+export const Container = styled(Box)`
+    .IconButton {
         display: flex;
         justify-content: flex-end;
         visibility: hidden;
@@ -9,23 +10,22 @@ export const Container = styled.div`
     &:hover .IconButton {
         visibility: visible;
     }
-    .CardActions{
+    .CardActions {
         display: flex;
         width: 168px;
         position: absolute;
         justify-content: flex-end;
     }
-    .CardMedia{
-        img{
+    .CardMedia {
+        img {
             object-fit: scale-down;
             width: 168px;
             height: 168px;
         }
     }
 
-    .Content{
+    .Content {
         display: flex;
         flex-wrap: wrap;
     }
-
 `;
