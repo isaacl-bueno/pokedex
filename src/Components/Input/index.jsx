@@ -5,7 +5,7 @@ export default function TextFields() {
   return (
     <TextField
       id="outlined-basic"
-      label="Outlined"
+      label="Pesquisa por nome ou numero"
       variant="outlined"
       style={{ borderRadius: '40px', height: "40px" }}
     />

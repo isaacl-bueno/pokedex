@@ -5,6 +5,8 @@ export const Container = styled.div`
     width: 380px;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     .filterBy{
         width: 100%;
     }

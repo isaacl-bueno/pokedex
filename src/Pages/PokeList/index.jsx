@@ -28,7 +28,7 @@ const CustomTable = () => {
     <S.Container>
       <Search/>
       <S.CardContainer>
-      <FilterBy/>
+      <FilterBy data={pokemon}/>
         <S.Cards>
         {uniquePokemon.map((poke, index) => (
           <RecipeReviewCard key={index} {...poke} />

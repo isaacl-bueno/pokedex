@@ -17,6 +17,7 @@ export const Container = styled.div`
     }
     .CardMedia{
         img{
+            object-fit: scale-down;
             width: 168px;
             height: 168px;
         }
