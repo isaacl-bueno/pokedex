@@ -6,20 +6,21 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
 
-    .buttonsContainer{
+    .ButtonsContainer {
         display: flex;
-        gap: 20px;
     }
 
-    .Buttons{
+    .Buttons {
+        margin: 5px;
         border-radius: 40px;
         background-color: #ffffff;
-        color: #E2350D;
-        border: 1px solid #E2350D;
+        color: #e2350d;
+        border: 1px solid #e2350d;
     }
 
-    :hover.Buttons{
-        background-color: #E2350D;
+    .Buttons:hover,
+    .Buttons.active { // Estilo para o botão clicado
+        background-color: #e2350d;
         color: #ffffff;
     }
 `;

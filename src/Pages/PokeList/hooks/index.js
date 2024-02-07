@@ -7,6 +7,7 @@ export default function usePokeDex() {
     const [pokemon, setPokemon] = useState([]);
     const [searchPokemon, setSearchPokemon] = useState('');
     const [loading, setLoading] = useState(false);
+    const [clickedTypes, setClickedTypes] = useState([]);
 
     const getPokemon = async () => {
         setLoading(true);
@@ -67,6 +68,8 @@ export default function usePokeDex() {
     ).map((name) => pokemon.find((poke) => poke.name === name));
 
     return {
+        clickedTypes,
+        setClickedTypes,
         pokemon,
         searchPokemon,
         loading,

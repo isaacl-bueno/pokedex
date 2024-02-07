@@ -6,9 +6,7 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #888888;
+    overflow-y: hidden;
 `;
 
 export const CardContainer = styled.div`
@@ -20,12 +18,18 @@ export const CardContainer = styled.div`
 `;
 
 export const Cards = styled.div`
-    width: 900px;
-    justify-content: space-between;
-    height: 100%;
+    width: 980px;
+    height: 650px;
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #888888;
+    
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #E2350D;
+        border-radius: 4px;
+    }
 `;

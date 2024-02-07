@@ -1,5 +1,4 @@
 import * as S from "./styles";
-// import heartSVG from "../../assets/faheart.svg";
 import pokeballSVG from "../../assets/pokeball.svg";
 import synviaSVG from "../../assets/synvia-A.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

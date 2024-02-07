@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import * as S from "./styles";
 import { Box } from '@mui/material';
+import heartSVG from "../../assets/faheart.svg";
 
 export default function RecipeReviewCard({
   national_number,
@@ -40,24 +41,20 @@ export default function RecipeReviewCard({
     setIsFavorite(favorites.includes(national_number));
   }, [national_number]);
 
-  const typeColors = {
-    "Grass": "#4CAF50",
-    "Poison": "#9C27B0",
-  };
-
   return (
     <S.Container >
-      <Card sx={{ maxWidth: 168, mt: 10 }}>
+      <Card sx={{ maxWidth: 180, mt: 10 , marginRight:"10px"}}>
         <CardActions className='CardActions'>
           <IconButton className='IconButton' aria-label="add to favorites" onClick={toggleFavorite}>
-            <FontAwesomeIcon icon={faHeart} style={{ color: isFavorite ? "#e60f00" : "#B8B8B8" }} />
+         {!isFavorite ? <img src={heartSVG} alt="Heart SVG" style={{ height: "25px", }} /> 
+                      : <FontAwesomeIcon icon={faHeart} style={{ color: "#E2350D" }} />}
           </IconButton>
         </CardActions>
         <CardMedia
           className='CardMedia'
           component="img"
-          height="168"
-          width="168"
+          height="180"
+          width="180"
           sx={{ objectFit: "scale-down" }}
           image={sprites?.large || ''}
           alt="Paella dish"

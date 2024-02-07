@@ -15,10 +15,6 @@ export default function TemplatePage() {
     getPokemon();
   }, []);
 
-  useEffect(() => {
-    console.log(loading);
-  }, [loading]);
-
   return (
     <S.Container>
       {loading && <Loader loading={loading} />}
