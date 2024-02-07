@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import * as S from "./styles";
 
 export default function Buttons({ data, filterByType }) {
-  const [clickedTypes, setClickedTypes] = useState([]);
+  const [clickedType, setClickedType] = useState(null);
 
   const filterTypes = (items) => {
     const newItems = items.map((item) => {
@@ -26,34 +26,22 @@ export default function Buttons({ data, filterByType }) {
   const [TypesValue, setTypesValue] = useState([]);
 
   const handleTypeClick = (type) => {
-    if (clickedTypes.includes(type)) {
-      setClickedTypes(clickedTypes.filter((clickedType) => clickedType !== type));
+    if (clickedType === type) {
+      setClickedType(null);
+      filterByType({ type: null, data });
     } else {
-      setClickedTypes([...clickedTypes, type]);
+      setClickedType(type);
+      filterByType({ type, data });
     }
-    filterByType({ type, data });
-  };
-
-  const handleClearFilters = () => {
-    setClickedTypes([]);
-    filterByType({ type: '', data });
   };
 
   return (
     <S.Container>
       <div className="filterBy">
-        <Button
-          className={`Buttons ${clickedTypes.length === 0 ? 'active' : ''}`} 
-          variant="contained"
-          color="primary"
-          onClick={handleClearFilters} // Limpa os filtros quando este botão é clicado
-        >
-          Todos
-        </Button>
         {TypesValue.map((type, idx) => (
           <Button
             key={idx}
-            className={`Buttons ${clickedTypes.includes(type) ? 'active' : ''}`}
+            className={`Buttons ${clickedType === type ? 'active' : ''}`}
             variant="contained"
             color="primary"
             onClick={() => handleTypeClick(type)}
