@@ -1,10 +1,12 @@
 import React from 'react';
+
+// @ Components
 import Buttons from './buttons';
 
+// @ Styles
 import * as S from "./styles";
 
-export default function FilterBy({ data }) {
-
+export const FilterBy = ({ data }) => {
   return (
     <S.Container>
       <div className='filterBy'>
