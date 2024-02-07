@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
@@ -7,9 +7,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 export default function CustomizedInputBase({ filterByNames, data }) {
 
-  const [search, setSearch] = React.useState('')
+  const [search, setSearch] = useState('')
 
-  React.useEffect(() => {
+  useEffect(() => {
     filterByNames({ search, data })
   }, [search])
 

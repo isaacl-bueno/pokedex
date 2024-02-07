@@ -7,7 +7,6 @@ export default function usePokeDex() {
     const [pokemon, setPokemon] = useState([]);
     const [searchPokemon, setSearchPokemon] = useState('');
     const [loading, setLoading] = useState(false);
-    const [clickedTypes, setClickedTypes] = useState([]);
 
     const getPokemon = async () => {
         setLoading(true);
@@ -15,6 +14,23 @@ export default function usePokeDex() {
             const ressponse = await services.getPokemon();
             console.log(ressponse);
             setPokemon(ressponse.results);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const filterByType = async ({ type, data }) => {
+        setLoading(true);
+        try {
+            const filtered = data.filter((poke) => {
+                return poke.type.includes(type);
+            });
+    
+            const newFiltered = filterPokemons({ filtered, pokemon });
+    
+            setSearchPokemon(newFiltered);
         } catch (error) {
             console.log(error);
         } finally {
@@ -68,8 +84,7 @@ export default function usePokeDex() {
     ).map((name) => pokemon.find((poke) => poke.name === name));
 
     return {
-        clickedTypes,
-        setClickedTypes,
+        filterByType,
         pokemon,
         searchPokemon,
         loading,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import * as S from "./styles";
 
-export default function Buttons({ data }) {
+export default function Buttons({ data, filterByType }) {
   const [clickedTypes, setClickedTypes] = useState([]);
 
   const filterTypes = (items) => {
@@ -31,11 +31,25 @@ export default function Buttons({ data }) {
     } else {
       setClickedTypes([...clickedTypes, type]);
     }
+    filterByType({ type, data });
+  };
+
+  const handleClearFilters = () => {
+    setClickedTypes([]);
+    filterByType({ type: '', data });
   };
 
   return (
     <S.Container>
       <div className="filterBy">
+        <Button
+          className={`Buttons ${clickedTypes.length === 0 ? 'active' : ''}`} 
+          variant="contained"
+          color="primary"
+          onClick={handleClearFilters} // Limpa os filtros quando este botão é clicado
+        >
+          Todos
+        </Button>
         {TypesValue.map((type, idx) => (
           <Button
             key={idx}

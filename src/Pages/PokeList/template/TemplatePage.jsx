@@ -9,7 +9,7 @@ import usePokeDex from "../hooks";
 import * as S from "./styles";
 
 export default function TemplatePage() {
-  const { pokemon, uniquePokemon, searchPokemon, getPokemon, loading, OrderBy, filterByNames } = usePokeDex();
+  const { pokemon, uniquePokemon, searchPokemon, getPokemon, loading, OrderBy, filterByNames, filterByType } = usePokeDex();
 
   useEffect(() => {
     getPokemon();
@@ -20,7 +20,7 @@ export default function TemplatePage() {
       {loading && <Loader loading={loading} />}
       <Search OrderBy={OrderBy} data={pokemon} filterByNames={filterByNames} />
       <S.CardContainer>
-        <FilterBy data={pokemon} />
+        <FilterBy data={pokemon} filterByType={filterByType}/>
         <S.Cards>
           {searchPokemon?.length === 0 && uniquePokemon.map((poke, index) => (
             <RecipeReviewCard key={index} {...poke} />
