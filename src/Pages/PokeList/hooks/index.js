@@ -12,7 +12,7 @@ export default function usePokeDex() {
         setLoading(true);
         try {
             const ressponse = await services.getPokemon();
-            console.log(ressponse);
+
             setPokemon(ressponse.results);
         } catch (error) {
             console.log(error);
@@ -27,9 +27,9 @@ export default function usePokeDex() {
             const filtered = data.filter((poke) => {
                 return poke.type.includes(type);
             });
-    
+
             const newFiltered = filterPokemons({ filtered, pokemon });
-    
+
             setSearchPokemon(newFiltered);
         } catch (error) {
             console.log(error);
@@ -44,7 +44,7 @@ export default function usePokeDex() {
             const filtered = data.filter((poke) => {
                 return nationalNumbers.includes(poke.national_number);
             });
-    
+
             const newFiltered = filterPokemons({ filtered, pokemon });
             if (filtered.length > 0) setSearchPokemon(newFiltered);
         } catch (error) {
@@ -53,7 +53,6 @@ export default function usePokeDex() {
             setLoading(false);
         }
     };
-    
 
     const filterByNames = ({ search, data }) => {
         setLoading(true);
@@ -76,19 +75,47 @@ export default function usePokeDex() {
 
     const OrderBy = async ({ type }) => {
         setLoading(true);
-        await new Promise((resolve) => setTimeout(resolve, 700));
+        await new Promise((resolve) => setTimeout(resolve, 500));
         try {
-            const filtered = pokemon.sort((a, b) => {
-                if (type === 'Ascendente') {
-                    return a.national_number.localeCompare(b.national_number);
-                } else {
-                    return b.national_number.localeCompare(a.national_number);
-                }
+            let sortedPokemon;
+            
+            if (type === 'ascendent_number') {
+                sortedPokemon = pokemon.slice().sort((a, b) => a.national_number.localeCompare(b.national_number));
+            } else if (type === 'descendent_number') {
+                sortedPokemon = pokemon.slice().sort((a, b) => b.national_number.localeCompare(a.national_number));
+            } else if (type === 'ascendent_name') {
+                sortedPokemon = pokemon.slice().sort((a, b) => a.name.localeCompare(b.name));
+            } else if (type === 'descendent_name') {
+                sortedPokemon = pokemon.slice().sort((a, b) => b.name.localeCompare(a.name));
+            } else {
+                sortedPokemon = pokemon.slice();
+            }
+    
+            const newFiltered = filterPokemons({ filtered: sortedPokemon, pokemon });
+            setSearchPokemon(newFiltered);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const filterByFavorites = (data) => {
+        setLoading(true);
+        try {
+            if (!data) {
+                setSearchPokemon([]);
+                return;
+            }
+            const favorites =
+                JSON.parse(localStorage.getItem('favorites')) || [];
+
+            const filtered = pokemon.filter((poke) => {
+                return favorites.includes(poke.national_number);
             });
 
             const newFiltered = filterPokemons({ filtered, pokemon });
-
-            setSearchPokemon(newFiltered);
+            if (filtered.length > 0) setSearchPokemon(newFiltered);
         } catch (error) {
             console.log(error);
         } finally {
@@ -110,5 +137,6 @@ export default function usePokeDex() {
         filterByNames,
         OrderBy,
         uniquePokemon,
+        filterByFavorites,
     };
 }

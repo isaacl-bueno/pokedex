@@ -19,11 +19,7 @@ export default function RecipeReviewCard({
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
-  useEffect(() => {
+  const onFavorite = (isFavorite) => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     if (isFavorite) {
       favorites.push(national_number);
@@ -34,21 +30,35 @@ export default function RecipeReviewCard({
       }
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [isFavorite, national_number]);
 
-  useEffect(() => {
+    setIsFavorite(isFavorite);
+  }
+
+  const checkFavorite = ({ setIsFavorite, national_number }) => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     setIsFavorite(favorites.includes(national_number));
+  }
+
+  useEffect(() => {
+    checkFavorite({ setIsFavorite, national_number });
   }, [national_number]);
+
+  useEffect(() => {
+    console.log(isFavorite)
+  }, [isFavorite]);
 
   return (
     <S.Container >
-      <Card className='CardContainer' sx={{ mt: 10  }}>
+      <Card className='CardContainer' sx={{ mt: 10 }}>
         <CardActions className='CardActions'>
-          <IconButton className='IconButton' aria-label="add to favorites" onClick={toggleFavorite}>
-         {!isFavorite ? <img src={heartSVG} alt="Heart SVG" style={{ height: "24px", }} /> 
-                      : <FontAwesomeIcon icon={faHeart} style={{ color: "#E2350D" }} />}
-          </IconButton>
+          {isFavorite ?
+            <IconButton aria-label="add to favorites" onClick={() => onFavorite(!isFavorite)}>
+              <FontAwesomeIcon icon={faHeart} style={{ color: "#E2350D" }} />
+            </IconButton>
+            :
+            <IconButton className='IconButton' aria-label="add to favorites" onClick={() => onFavorite(!isFavorite)}>
+              <img src={heartSVG} alt="Heart SVG" style={{ height: "24px", }} />
+            </IconButton>}
         </CardActions>
         <CardMedia
           className='CardMedia'
@@ -63,7 +73,7 @@ export default function RecipeReviewCard({
           <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
             {"Nº " + (national_number || '')}
           </Typography>
-          <Typography sx={{ width: "100%", color: "#333333", fontSize: "18px",  }} variant="body2" color="text.secondary">
+          <Typography sx={{ width: "100%", color: "#333333", fontSize: "18px", }} variant="body2" color="text.secondary">
             <b>{name || ''}</b>
           </Typography >
           <Typography sx={{ width: "100%", display: "flex", color: "#333333", }}>

@@ -17,9 +17,23 @@ const MenuProps = {
   },
 };
 
-const names = [
-  "Ascendente",
-  "Descendente"
+const Types = [
+  {
+    name: "Ascendente número",
+    value: "ascendent_number",
+  },
+  {
+    name: "Descendente número",
+    value: "descendent_number",
+  },
+  {
+    name: "Ascendente por nome",
+    value: "ascendent_name",
+  },
+  {
+    name: "Descendente por nome",
+    value: "descendent_name",
+  }
 ];
 
 function getStyles(name, personName, theme) {
@@ -60,14 +74,15 @@ export default function SingleSelect({ labelName, OrderBy }) {
             color: "#E2350D",
             borderColor: "#E2350D",
           }}
+          data-testid="select_testid"
         >
-          {names.map((name) => (
+          {Types.map((item) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
+              key={item.value}
+              value={item.value}
+              style={getStyles(item.name, personName, theme)}
             >
-              {name}
+              {item.name}
             </MenuItem>
           ))}
         </Select>

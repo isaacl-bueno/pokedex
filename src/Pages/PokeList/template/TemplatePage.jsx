@@ -9,10 +9,11 @@ import usePokeDex from "../hooks";
 import * as S from "./styles";
 
 export default function TemplatePage() {
-  const { pokemon, uniquePokemon, searchPokemon, getPokemon, loading, OrderBy, filterByNames, filterByType, filterByNationalNumber } = usePokeDex();
+  const { pokemon, uniquePokemon, searchPokemon, getPokemon, filterByFavorites, loading, OrderBy, filterByNames, filterByType, filterByNationalNumber } = usePokeDex();
 
   useEffect(() => {
     getPokemon();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -20,7 +21,12 @@ export default function TemplatePage() {
       {loading && <Loader loading={loading} />}
       <Search OrderBy={OrderBy} data={pokemon} filterByNames={filterByNames} />
       <S.CardContainer>
-        <FilterBy data={pokemon} filterByType={filterByType} filterByNationalNumber={filterByNationalNumber}/>
+        <FilterBy
+          data={pokemon}
+          filterByType={filterByType}
+          filterByFavorites={filterByFavorites}
+          filterByNationalNumber={filterByNationalNumber}
+        />
         <S.Cards>
           {searchPokemon?.length === 0 && uniquePokemon.map((poke, index) => (
             <RecipeReviewCard key={index} {...poke} />

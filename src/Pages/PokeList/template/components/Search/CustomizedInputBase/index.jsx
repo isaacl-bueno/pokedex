@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
@@ -11,6 +11,7 @@ export default function CustomizedInputBase({ filterByNames, data }) {
 
   useEffect(() => {
     filterByNames({ search, data })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search])
 
   return (

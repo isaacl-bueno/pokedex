@@ -250,12 +250,6 @@ export const theme = createTheme({
             disabled: 'rgba(55, 65, 81, 0.48)',
             widget: '#FFFFFF',
         },
-        dark: {
-            main: '#000000',
-            light: '#374151',
-            dark: '#000000',
-            contrastText: '#FFFFFF',
-        },
     },
     shape: {
         borderRadius: 8,
