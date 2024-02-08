@@ -18,12 +18,12 @@ export const Container = styled.div`
     }
     .Switch{
         padding: 7px;
-        .css-1yjjitx-MuiSwitch-track {
+        .MuiSwitch-track {
             border-radius: 50px;
         } 
-        .css-1ju1kxc {
+        /* .css-1ju1kxc {
             border-radius: 50px;
-        }
+        } */
         .Mui-checked {
             color: #FFF;
         }

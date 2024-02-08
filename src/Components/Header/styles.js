@@ -20,7 +20,7 @@ export const LowContainer = styled.header`
 
 export const CenterDiv = styled.div`
     width: 100%;
-    max-width: 1280px;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;

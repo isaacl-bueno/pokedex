@@ -4,9 +4,9 @@ import styled from 'styled-components';
 export const Container = styled(Box)`
     max-height: 350px;
     .CardContainer {
-        max-width: 180px;
+        max-width: 190px;
         max-height: 320px;
-        margin-right: 15px;
+        margin-right: 25px;
         margin-top: 0px;
         margin-bottom: 25px;
         box-shadow: none;

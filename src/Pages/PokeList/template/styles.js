@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 1280px;
+    width: 1400px;
     justify-content: space-between;
     height: 100%;
     display: flex;
@@ -11,14 +11,14 @@ export const Container = styled.div`
 
 export const CardContainer = styled.div`
     overflow: hidden;
-    width: 1280px;
+    width: 1400px;
     justify-content: space-between;
     height: 100%;
     display: flex;
 `;
 
 export const Cards = styled.div`
-    width: 1000px;
+    width: 1200px;
     height: 850px;
     display: flex;
     flex-wrap: wrap;
