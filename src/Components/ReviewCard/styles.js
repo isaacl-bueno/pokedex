@@ -2,10 +2,13 @@ import { Box } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled(Box)`
+    max-height: 350px;
     .CardContainer {
         max-width: 180px;
-        max-height: 340px;
+        max-height: 320px;
         margin-right: 15px;
+        margin-top: 0px;
+        margin-bottom: 25px;
         box-shadow: none;
     }
     .IconButton {
@@ -22,7 +25,7 @@ export const Container = styled(Box)`
         justify-content: flex-end;
     }
     .CardMedia {
-        margin-top: -35px;
+        margin-top: -45px;
         img {
             object-fit: scale-down;
             width: 168px;
