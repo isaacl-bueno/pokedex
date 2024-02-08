@@ -19,19 +19,19 @@ const MenuProps = {
 
 const Types = [
   {
-    name: "Ascendente número",
+    name: "Menor número primeiro",
     value: "ascendent_number",
   },
   {
-    name: "Descendente número",
+    name: "Maior número primeiro",
     value: "descendent_number",
   },
   {
-    name: "Ascendente por nome",
+    name: "Por nome de A - Z",
     value: "ascendent_name",
   },
   {
-    name: "Descendente por nome",
+    name: "Por nome de Z - A",
     value: "descendent_name",
   }
 ];
@@ -59,7 +59,7 @@ export default function SingleSelect({ labelName, OrderBy }) {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 150 }}>
+      <FormControl sx={{ m: 1, width: 220 }}>
         <Select
           labelId="demo-single-name-label"
           id="demo-single-name"
@@ -70,7 +70,7 @@ export default function SingleSelect({ labelName, OrderBy }) {
           sx={{
             borderRadius: '40px',
             height: "40px",
-            width: "150px",
+            width: "220px",
             color: "#E2350D",
             borderColor: "#E2350D",
           }}

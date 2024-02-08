@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import * as S from "./styles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export default function Buttons({ data, filterByType }) {
-  console.log(data);
   const [clickedType, setClickedType] = useState(null);
 
   const filterTypes = (items) => {
@@ -49,6 +50,7 @@ export default function Buttons({ data, filterByType }) {
             data-testid="button_testid"
           >
             {type}
+            <FontAwesomeIcon className='icon' icon={faCheck} />
           </Button>
         ))}
       </div>

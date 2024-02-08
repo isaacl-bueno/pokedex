@@ -43,10 +43,6 @@ export default function RecipeReviewCard({
     checkFavorite({ setIsFavorite, national_number });
   }, [national_number]);
 
-  useEffect(() => {
-    console.log(isFavorite)
-  }, [isFavorite]);
-
   return (
     <S.Container >
       <Card className='CardContainer' sx={{ mt: 10 }}>
@@ -67,7 +63,7 @@ export default function RecipeReviewCard({
           width="180"
           sx={{ objectFit: "scale-down" }}
           image={sprites?.large || ''}
-          alt="Paella dish"
+          alt="Image"
         />
         <CardContent className='Content'>
           <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">

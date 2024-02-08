@@ -16,11 +16,24 @@ export const Container = styled.div`
         background-color: #ffffff;
         color: #e2350d;
         border: 1px solid #e2350d;
+        .icon{
+            font-size: 0px;
+            visibility: hidden
+        }
     }
 
     .Buttons:hover,
-    .Buttons.active { // Estilo para o botão clicado
+    .Buttons.active {
         background-color: #e2350d;
         color: #ffffff;
+    }
+
+    .Buttons.active {
+        .icon{
+            color: #ffffff; 
+            font-size: 15px;
+            margin-left: 3px;
+            visibility: visible;
+        }
     }
 `;

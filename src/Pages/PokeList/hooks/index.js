@@ -100,22 +100,22 @@ export default function usePokeDex() {
         }
     };
 
-    const filterByFavorites = (data) => {
+    const filterByFavorites = (data, setNoFavorite) => {
         setLoading(true);
         try {
             if (!data) {
                 setSearchPokemon([]);
                 return;
             }
-            const favorites =
-                JSON.parse(localStorage.getItem('favorites')) || [];
-
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
             const filtered = pokemon.filter((poke) => {
                 return favorites.includes(poke.national_number);
             });
-
+    
             const newFiltered = filterPokemons({ filtered, pokemon });
             if (filtered.length > 0) setSearchPokemon(newFiltered);
+            setNoFavorite(false);
         } catch (error) {
             console.log(error);
         } finally {

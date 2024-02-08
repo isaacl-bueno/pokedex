@@ -5,7 +5,6 @@ import { Loader } from "../../../Components/Loader";
 import RecipeReviewCard from "../../../Components/ReviewCard";
 
 import usePokeDex from "../hooks";
-
 import * as S from "./styles";
 
 export default function TemplatePage() {
