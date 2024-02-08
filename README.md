@@ -18,8 +18,7 @@ Após escolher o terminal e ter o link de download basta usar o comando:
 
 * git clone "link de download ou código SSH"
 
-![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/838bcd75-442e-4cf6-9d1b-1ba0675ad4be)
-
+![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/a3b742b1-207b-4567-af1c-7b4d35d3bcd4)
 
 Apos ter instalado basta abrir o mesmo em um editor de texto(VSCode, Visual Studio 2024 e etc..) para visualizar o código.
 
@@ -35,7 +34,7 @@ ou caso esteja utilizando o Yarn:
 
 * yarn install
 
-![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/db87b6f0-3b40-4da3-93b7-5134ac9be65f)
+![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/ffa5bd41-0b66-46a2-909d-d2ccb838a5da)
 
 
 isso ira instalar o node_modules em seu projeto que é responsavel por todas as dependencias usadas na codificação. Após a instalação que pode demorar
