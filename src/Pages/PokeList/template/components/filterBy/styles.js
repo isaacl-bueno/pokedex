@@ -24,13 +24,11 @@ export const Container = styled.div`
         .css-1ju1kxc {
             border-radius: 50px;
         }
-        .css-uru11c-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+        .Mui-checked {
             color: #FFF;
         }
-        .css-uru11c-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+        .Mui-checked + .MuiSwitch-track {
             background-color: #E2350D;
-        }
-        .css-uru11c-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
             opacity: 1;
         }
     }
