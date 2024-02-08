@@ -43,10 +43,10 @@ export default function RecipeReviewCard({
 
   return (
     <S.Container >
-      <Card sx={{ maxWidth: 180, mt: 10 , marginRight:"10px"}}>
+      <Card className='CardContainer' sx={{ mt: 10  }}>
         <CardActions className='CardActions'>
           <IconButton className='IconButton' aria-label="add to favorites" onClick={toggleFavorite}>
-         {!isFavorite ? <img src={heartSVG} alt="Heart SVG" style={{ height: "25px", }} /> 
+         {!isFavorite ? <img src={heartSVG} alt="Heart SVG" style={{ height: "24px", }} /> 
                       : <FontAwesomeIcon icon={faHeart} style={{ color: "#E2350D" }} />}
           </IconButton>
         </CardActions>
@@ -63,7 +63,7 @@ export default function RecipeReviewCard({
           <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
             {"Nº " + (national_number || '')}
           </Typography>
-          <Typography sx={{ width: "100%", color: "#333333", }} variant="body2" color="text.secondary">
+          <Typography sx={{ width: "100%", color: "#333333", fontSize: "18px",  }} variant="body2" color="text.secondary">
             <b>{name || ''}</b>
           </Typography >
           <Typography sx={{ width: "100%", display: "flex", color: "#333333", }}>

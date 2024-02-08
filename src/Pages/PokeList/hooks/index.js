@@ -38,6 +38,23 @@ export default function usePokeDex() {
         }
     };
 
+    const filterByNationalNumber = ({ nationalNumbers, data }) => {
+        setLoading(true);
+        try {
+            const filtered = data.filter((poke) => {
+                return nationalNumbers.includes(poke.national_number);
+            });
+    
+            const newFiltered = filterPokemons({ filtered, pokemon });
+            if (filtered.length > 0) setSearchPokemon(newFiltered);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+    
+
     const filterByNames = ({ search, data }) => {
         setLoading(true);
         try {
@@ -84,6 +101,7 @@ export default function usePokeDex() {
     ).map((name) => pokemon.find((poke) => poke.name === name));
 
     return {
+        filterByNationalNumber,
         filterByType,
         pokemon,
         searchPokemon,

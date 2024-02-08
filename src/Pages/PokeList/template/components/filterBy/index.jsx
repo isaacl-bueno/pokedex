@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Switch from '@mui/material/Switch';
 
 // @ Components
@@ -7,11 +7,22 @@ import Buttons from './buttons';
 // @ Styles
 import * as S from "./styles";
 
-export const FilterBy = ({ data, filterByType }) => {
+export const FilterBy = ({ data, filterByType, filterByNationalNumber }) => {
   const [filterFavorites, setFilterFavorites] = useState(false);
+  const [favoriteNumbers, setFavoriteNumbers] = useState([]);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavoriteNumbers(favorites);
+  }, []);
 
   const handleFilterChange = () => {
     setFilterFavorites(!filterFavorites);
+    if (!filterFavorites) {
+      filterByNationalNumber({ nationalNumbers: [], data });
+    } else {
+      filterByNationalNumber({ nationalNumbers: favoriteNumbers, data });
+    }
   };
 
   return (

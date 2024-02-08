@@ -18,8 +18,8 @@ export const CardContainer = styled.div`
 `;
 
 export const Cards = styled.div`
-    width: 980px;
-    height: 650px;
+    width: 1000px;
+    height: 850px;
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;

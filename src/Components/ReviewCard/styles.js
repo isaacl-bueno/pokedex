@@ -2,6 +2,12 @@ import { Box } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled(Box)`
+    .CardContainer {
+        max-width: 180px;
+        max-height: 340px;
+        margin-right: 15px;
+        box-shadow: none;
+    }
     .IconButton {
         display: flex;
         justify-content: flex-end;
@@ -12,11 +18,11 @@ export const Container = styled(Box)`
     }
     .CardActions {
         display: flex;
-        width: 168px;
-        position: absolute;
+        width: 180px;
         justify-content: flex-end;
     }
     .CardMedia {
+        margin-top: -35px;
         img {
             object-fit: scale-down;
             width: 168px;
