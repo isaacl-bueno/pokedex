@@ -131,6 +131,8 @@ foi realizado um Filtro para não renderizar duplicidades de pokemons pois na AP
 ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/737569de-fe11-4526-bd53-f511f2fd5c4b)
 
 
+é isso espero que goste do meu projeto e arquitetura.
+
 
 
 
