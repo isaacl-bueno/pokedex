@@ -106,7 +106,7 @@ como está:
 ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/9813fc87-f850-49a6-9d11-5a760762e74b)
 
 * O icone do header que indica sair da aplicação, foi usado da biblioteca https://fontawesome.com, porem na versão
-gratuita não do formato pedido.
+gratuita não tem do formato pedido.
 
 como deveria estar:
 
