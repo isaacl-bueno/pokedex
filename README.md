@@ -100,21 +100,21 @@ Foi seguido conforme o protótipo, porém algumas coisas não foram possíveis d
  
 * A imagem que deveria ter um fundo cinza no protótipo, porém, tem fundo branco como mostra abaixo:
 
-   como deveria estar:
+   Como está no protótipo:
    
    ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/ce6a3318-e867-4f76-b04d-d3482beff3c5) 
    
-   como está:
+   Como ficou o projeto final:
    
    ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/9813fc87-f850-49a6-9d11-5a760762e74b)
 
 * O ícone do header que indica sair da aplicação foi utilizado da biblioteca https://fontawesome.com. No entanto, na versão gratuita, não há o formato pedido como mostra abaixo:
 
-   como deveria estar:
+   Como está no protótipo:
    
    ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/af545874-a394-4804-aad6-7de9c6f9d7b7)
    
-   como está:
+   Como ficou o projeto final:
    
    ![image](https://github.com/isaacl-bueno/pokedex/assets/86806394/111afcce-9c47-4884-9f81-a8942ac37b72)
 
@@ -135,7 +135,6 @@ Foi realizado um filtro para não renderizar duplicidades de pokemons, pois na A
 
 
 É isso! Espero que tenha gostado do meu projeto e da arquitetura por trás dele. 
-
 Se tiver mais alguma dúvida ou sugestão, estou à disposição. 
 
 Até mais!
